@@ -1,0 +1,44 @@
+%h1 instructions
+%ol
+  %li type in the following box and hit enter after each elem
+  %li hit go when you're done
+
+%input#in
+%br
+
+%button go
+%p#target
+
+%ol#here
+
+:javascript
+  var render = function(elems, iterations) {
+    var length = elems.length;
+    var $ol = $('#here');
+    $ol.html('');
+    for (var i=0; i < length; i++) {
+      $ol.append($('<li>' + elems[i] + '</li>'));
+    }
+    if (iterations !== undefined) {
+      $('#target').text((iterations-1) + ' iterations to go');
+    }
+  };
+
+  var elems = [];
+  $('#in').keypress(function(e){
+    if (e.which == 13) {
+      e.preventDefault();
+      elems.push($(this).val());
+      $(this).val('');
+      render(elems);
+    }
+  });
+
+  $('button').click(function(){
+    var times = 100;
+    var delay = 100;
+    repeat_with_delay(times, delay, function(i){
+      elems = hello.change(elems);
+      render(elems, i);
+    });
+  });

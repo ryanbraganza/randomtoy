@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/lypanov/clementine.git
+  revision: 52516ecfffe907fe58a2c25881425f49387ba56f
+  specs:
+    clementine (0.0.1)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,8 +37,6 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.0)
-    clementine (0.0.1)
-      tilt
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -42,6 +47,12 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    haml (3.1.6)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -105,8 +116,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  clementine
+  clementine!
   coffee-rails (~> 3.2.1)
+  haml-rails
   jquery-rails
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
